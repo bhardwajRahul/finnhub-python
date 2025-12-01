@@ -526,5 +526,8 @@ class Client:
     def stock_revenue_breakdown2(self, symbol):
         return self._get("/stock/revenue-breakdown2", params={"symbol": symbol})
 
+    def newsroom(self, symbol, _from=None, to=None):
+        return self._get("/stock/newsroom", params={"symbol": symbol, "from": _from, "to": to})
+
     def bank_branch(self, symbol):
         return self._get("/bank-branch", params={"symbol": symbol})

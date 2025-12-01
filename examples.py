@@ -3,6 +3,8 @@ import os
 
 # Setup client
 finnhub_client = finnhub.Client(api_key=os.environ["FINNHUB_API_KEY"])
+print(finnhub_client.newsroom('AAPL'))
+
 print(finnhub_client.stock_presentation('AAPL'))
 print(finnhub_client.stock_revenue_breakdown2('AAPL'))
 
