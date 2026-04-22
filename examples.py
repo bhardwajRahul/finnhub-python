@@ -3,6 +3,11 @@ import os
 
 # Setup client
 finnhub_client = finnhub.Client(api_key=os.environ["FINNHUB_API_KEY"])
+print(finnhub_client.company_net_income_estimates('TSLA', freq='quarterly'))
+print(finnhub_client.company_pretax_income_estimates('TSLA', freq='quarterly'))
+print(finnhub_client.company_gross_income_estimates('TSLA', freq='quarterly'))
+print(finnhub_client.company_dps_estimates('AAPL', freq='quarterly'))
+
 print(finnhub_client.newsroom('AAPL'))
 
 print(finnhub_client.stock_presentation('AAPL'))
